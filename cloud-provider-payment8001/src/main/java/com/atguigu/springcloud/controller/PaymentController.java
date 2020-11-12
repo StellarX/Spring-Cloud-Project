@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
-
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -34,7 +33,7 @@ public class PaymentController
     public CommonResult create(@RequestBody Payment payment)
     {
         int result = paymentService.create(payment);
-        log.info("*****插入结果："+result);
+//        log.info("*****插入结果："+result);
         if(result > 0)
         {
             return new CommonResult(200,"插入数据库成功,serverPort: "+serverPort, result);
