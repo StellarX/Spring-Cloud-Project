@@ -30,7 +30,7 @@ public class PaymentService
     })
     public String paymentInfo_TimeOut(Integer id) {
         //int age = 10/0;//异常和超时都会造成降级
-        try { TimeUnit.MILLISECONDS.sleep(2500); } catch (InterruptedException e) { e.printStackTrace(); }
+        try { TimeUnit.MILLISECONDS.sleep(1500); } catch (InterruptedException e) { e.printStackTrace(); }
         return "线程池:  "+Thread.currentThread().getName()+" id:  "+id+"\t"+"O(∩_∩)O哈哈~"+"  耗时(秒): ";
     }
 
