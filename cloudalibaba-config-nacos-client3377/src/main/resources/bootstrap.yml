@@ -6,7 +6,6 @@ spring:
   profiles:
     active:
       dev
-#    include:
   application:
     name: nacos-config-client
   cloud:
