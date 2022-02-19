@@ -18,7 +18,7 @@ public class OrderController
     @Resource
     private OrderService orderService;
 
-
+//  http://localhost:2001/order/create?id=1&userId=1&productId=1&count=22&money=66
     @GetMapping("/order/create")
     public CommonResult create(Order order)
     {
