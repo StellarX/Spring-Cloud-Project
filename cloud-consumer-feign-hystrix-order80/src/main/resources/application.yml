@@ -5,7 +5,8 @@ eureka:
   client:
     register-with-eureka: false
     service-url:
-      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+      defaultZone: http://eureka7001.com:7001/eureka
+#      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
 
 #ribbon:
 #  #指的是建立连接后从服务器读取到可用资源所用的时间
@@ -20,7 +21,7 @@ hystrix:
           enabled: true
         isolation:
           thread:
-            timeoutInMilliseconds: 5000
+            timeoutInMilliseconds: 5000 # 这个配置也是接口调用的超时配置，但开启feign对hystrix的支持才生效
 feign:
   client:
     config:
@@ -28,4 +29,4 @@ feign:
         connectTimeout: 5000 # 由于ribbon配置无效，改用feign的配置
         readTimeout: 5000
   hystrix:
-    enabled: true # 开启feign对hystrix的支持
+    enabled: false # 开启feign对hystrix的支持

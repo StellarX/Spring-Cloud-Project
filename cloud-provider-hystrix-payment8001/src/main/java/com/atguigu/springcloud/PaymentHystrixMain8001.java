@@ -16,7 +16,7 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 @EnableEurekaClient
 //@EnableCircuitBreaker//hystrix
-@EnableHystrix//此注解包含了@EnableCircuitBreaker
+//@EnableHystrix//此注解包含了@EnableCircuitBreaker
 public class PaymentHystrixMain8001
 {
     public static void main(String[] args) {
